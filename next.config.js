@@ -5,6 +5,12 @@ const nextConfig = {
     unoptimized: false,
   },
   output: 'standalone',
+  // Enable serverless optimization
+  experimental: {
+    outputFileTracingIncludes: {
+      '/': ['./public/**/*'],
+    },
+  },
 }
 
 module.exports = nextConfig
